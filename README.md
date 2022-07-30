@@ -3,6 +3,7 @@ This repo contains practice code for scala 2 programming language. You need to m
 ## Content
   - [Compile the code](#compile-the-code)
   - [Run the program](#run-the-program)
+  - [Resources](#resources)
 
 ### Compile the code
 ```
@@ -14,3 +15,7 @@ run the below command scala -The object containing the main method-
 ```
 scala Demo
 ```
+
+### Resources
+- [Tutorial Point](https://www.tutorialspoint.com/scala/scala_overview.htm)
+- [Scala 3 - Book](https://docs.scala-lang.org/scala3/book/scala-features.html)
