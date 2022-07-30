@@ -13,7 +13,7 @@ It will take some time."""
 
 		// Below code is an example of everything in scala is an expression and 
 		// returns a value 
-		val v = 
+		var v = 
 		if (x >500 && x < 600) {
 			println("x is less")
 			println("x is more less")
@@ -29,11 +29,15 @@ It will take some time."""
 		println(v)
 		
     // for with filters
-    val nums = List(23,23,1,5,9, 3)
+    val nums = List(23,23,1,5,9,14,3)
     println("Nums within limts are")
-    for (x <- nums
+    var t = for (x <- nums
       if x>5; if x<20 ){
-      println(x)
+      println(x);
     }
+    println(t) // -> ()
+    
+    var retVal = for{ i <- nums if i>10 ; if i<20} yield i
+    println("retVal of loop "+ retVal) // -> List(14)
 	}
 }
