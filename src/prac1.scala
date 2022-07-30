@@ -27,6 +27,13 @@ It will take some time."""
 			3
 		}
 		println(v)
-
+		
+    // for with filters
+    val nums = List(23,23,1,5,9, 3)
+    println("Nums within limts are")
+    for (x <- nums
+      if x>5; if x<20 ){
+      println(x)
+    }
 	}
 }
