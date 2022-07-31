@@ -30,7 +30,11 @@ object Demo{
     var result2 = (a: Int,b: Int) => a+b
     println(s"The result of result1=(_: Int)+(_: Int) = ${result1(34,2)}")
     println(s"The result of result2=(a: Int,b: Int) => a+b = ${result2(34,2)}")
-
+    
+    println("\n-------Multiline expression-------")
+    println(multilineExp1(5,8))
+    println(multilineExp2(5,8))
+    // multilineExp3(5,8)
   }
   // Function without = operator
   def func1(a: Int, b: Int){
@@ -55,4 +59,20 @@ object Demo{
   def hofCurrying(m: Int)(n: Int) = {
     m+n
   }
+  def multilineExp1(a: Int, b: Int) = {
+    a+
+    b
+  }
+
+  def multilineExp2(a: Int, b: Int) = {
+    (a
+    +b)
+  }
+  //Below one will fail as this is not the right way
+  /*
+  def multilineExp3(a: Int, b: Int) = {
+    a
+    +b
+  }
+  */
 }
