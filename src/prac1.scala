@@ -54,7 +54,7 @@ It will take some time."""
     })
     println("--------Using by keyword in for loop--------")
     // For loop using "by" keyword
-    // By 2 keyword is used to skip all the even iteration here
+    // By 2 keyword is used to skip all the even iteration(not the number itself) here
     for (i <- 1 to 10 by 2){
       println(i)
     }
@@ -63,7 +63,8 @@ It will take some time."""
     println("--------Using break method--------")
     breakable{
       for (i <- 10 to 20 by 2){
-        if(i==17){
+        // Here since it start at 10, the even iteration will have odd numbers and those gets skipped
+        if(i==16){
           println(i)
           break
         }
