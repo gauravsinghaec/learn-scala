@@ -46,5 +46,11 @@ It will take some time."""
       case 500 => println("Got differen match")
       case _ => println("Opps")
     }
+    search("x")
+  }
+  def search(str:String) = str match { 
+    case "Alexa" => println("Saying alexa")
+    case "Google" => println("saying goodle")
+    case _ => println("Didn't hear anything")
   }
 }
