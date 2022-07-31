@@ -14,8 +14,10 @@ It will take some time."""
 		println(s"y.abs = ${y.abs}")
 
     println("--------if-else--------")
-		// Below code is an example of everything in scala is an expression and 
-		// returns a value 
+		/**
+     * Below code is an example of everything in scala is an expression and  
+     * returns a value   
+     */
 		var v = 
 		if (x >500 && x < 600) {
 			println("x is less")
