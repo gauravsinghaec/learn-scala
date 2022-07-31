@@ -40,6 +40,18 @@ It will take some time."""
     var retVal = for{ i <- nums if i>10 ; if i<20} yield i
     println("retVal of loop "+ retVal) // -> List(14)
 
+    // For each in the List
+    var i = 1
+    nums.foreach((n: Int)=>{
+      println(s"Here is ${i} element in num list: ${n}")
+      i = i+1
+    })
+    // For loop using "by" keyword
+    // By 2 keyword is used to skip all the even iteration here
+    for (i <- 1 to 10 by 2){
+      println(i)
+    }
+
     // Matching in scala
     x match{
       case 1000 => println("Got the match")
