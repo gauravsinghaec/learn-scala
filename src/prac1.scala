@@ -1,4 +1,4 @@
-object practice1{
+object Demo{
 	def main(args: Array[String]){
 		val x = 1000L
 		val y = 2.1D
@@ -39,5 +39,12 @@ It will take some time."""
     
     var retVal = for{ i <- nums if i>10 ; if i<20} yield i
     println("retVal of loop "+ retVal) // -> List(14)
-	}
+
+    // Matching in scala
+    x match{
+      case 1000 => println("Got the match")
+      case 500 => println("Got differen match")
+      case _ => println("Opps")
+    }
+  }
 }
