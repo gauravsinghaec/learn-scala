@@ -53,8 +53,10 @@ It will take some time."""
       i = i+1
     })
     println("--------Using by keyword in for loop--------")
-    // For loop using "by" keyword
-    // By 2 keyword is used to skip all the even iteration(not the number itself) here
+    /* 
+      For loop using "by" keyword
+      By 2 keyword is used to skip all the even iteration(not the number itself) here
+    */
     for (i <- 1 to 10 by 2){
       println(i)
     }
