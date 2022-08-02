@@ -63,6 +63,30 @@ class C extends B {
   var z = 121
 }
 
+class Bank{    
+  def getRateOfInterest()={  
+    0  
+  }    
+}    
+    
+class SBI extends Bank{    
+  override def getRateOfInterest()={  
+    8  
+  }    
+}    
+    
+class ICICI extends Bank{    
+  override def getRateOfInterest()={  
+    7  
+  }    
+}    
+  
+class AXIS extends Bank{    
+  override def getRateOfInterest()={  
+    9  
+  }    
+}    
+
 object Demo{
   def main(args:Array[String]){
     val Car = new Vehicle()
@@ -98,5 +122,13 @@ object Demo{
     println("\n--------Multilevel Inheretence--------")
     val c = new C()
     println(c.x,c.y,c.z)
+
+    println("\n--------Method Overriding--------")
+    var s=new SBI();    
+    var i=new ICICI();    
+    var a=new AXIS();    
+    println("SBI Rate of Interest: "+s.getRateOfInterest());    
+    println("ICICI Rate of Interest: "+i.getRateOfInterest());    
+    println("AXIS Rate of Interest: "+a.getRateOfInterest());    
   }
 }
