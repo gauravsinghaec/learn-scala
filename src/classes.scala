@@ -53,6 +53,16 @@ class ThisExample2(name: String){
   }
 }
 
+class A {
+  var x = 10
+}
+class B extends A {
+  var y = 6
+}
+class C extends B {
+  var z = 121
+}
+
 object Demo{
   def main(args:Array[String]){
     val Car = new Vehicle()
@@ -84,5 +94,9 @@ object Demo{
     
     println("\n--------calling 1 constructor from other--------")
     var ex2 = new ThisExample2("Gaurav", 32)
+
+    println("\n--------Multilevel Inheretence--------")
+    val c = new C()
+    println(c.x,c.y,c.z)
   }
 }
