@@ -87,6 +87,13 @@ class AXIS extends Bank{
   }    
 }    
 
+class Bike extends Vehicle{
+  override val vehicleType: Int = 1
+  def show{
+    println(s"My vehicle type is ${this.vehicleType}")
+  }
+}
+
 object Demo{
   def main(args:Array[String]){
     val Car = new Vehicle()
@@ -130,5 +137,8 @@ object Demo{
     println("SBI Rate of Interest: "+s.getRateOfInterest());    
     println("ICICI Rate of Interest: "+i.getRateOfInterest());    
     println("AXIS Rate of Interest: "+a.getRateOfInterest());    
+
+    println("\n--------Field Overriding--------")
+    new Bike().show
   }
 }
