@@ -24,5 +24,8 @@ object Demo{
     val van2 = new VehiclePrimCons(2,3)
     println(van1.location)
     println(van2.location)
+
+    println("\n--------Anonymous Object--------")
+    println(new VehiclePrimCons(12,30).location)
   }
 }
