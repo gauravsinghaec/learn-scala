@@ -14,6 +14,26 @@ class VehiclePrimCons(positionX:Int, positionY: Int){
   }
 }
 
+object SingletonObject{
+  def add2(in: Int) ={
+    in+2
+  }
+}
+class Demo{
+  def show(){
+    println("Inside companion class")
+  }
+}
+
+class Overloading {
+  def add(x: Int,y: Int) = {
+    x+y
+  }
+  def add(x: Int,y: Int,z: Int) = {
+    x+y+z
+  }
+}
+
 object Demo{
   def main(args:Array[String]){
     val Car = new Vehicle()
@@ -27,5 +47,16 @@ object Demo{
 
     println("\n--------Anonymous Object--------")
     println(new VehiclePrimCons(12,30).location)
+
+    println("\n--------Singleton Object--------")
+    println(SingletonObject.add2(42))
+
+    println("\n--------Companion Object--------")
+    println("Inside companion object")
+    new Demo().show()
+    println("\n--------Method overloading--------")
+    val newObject = new Overloading()
+    println(newObject.add(12,56))
+    println(newObject.add(34,12,56))
   }
 }
