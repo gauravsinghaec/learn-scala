@@ -8,7 +8,7 @@ class Vehicle{
   }
 }
 
-class VehiclePrimCons(positionX:Int, positionY: Int){
+class VehiclePrimCons(val positionX:Int, val positionY: Int){
   def location() = {
     (positionX,positionY)
   }
@@ -94,6 +94,12 @@ class Bike extends Vehicle{
   }
 }
 
+class Car(override val positionX: Int, override val positionY: Int, name: String) extends VehiclePrimCons(positionX,positionY){
+  def location(z: Int){
+    println(s"My ${name} position is ${(positionX,positionY)}")
+  }
+}
+
 object Demo{
   def main(args:Array[String]){
     val Car = new Vehicle()
@@ -140,5 +146,6 @@ object Demo{
 
     println("\n--------Field Overriding--------")
     new Bike().show
+    new Car(12,34,"California T").location(56)
   }
 }
